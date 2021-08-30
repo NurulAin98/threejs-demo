@@ -8,9 +8,12 @@
 const THREE = require("three");
 
 function createRenderer() {
-  let renderer = new THREE.WebGLRenderer();
+  let renderer = new THREE.WebGLRenderer({
+      antialias: true,
+  });
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setClearColor("#16161d");
+  renderer.setPixelRatio(window.devicePixelRatio);
   let output = document.querySelector("#output");
   output.appendChild(renderer.domElement);
   return renderer;
@@ -90,7 +93,7 @@ scene.add(cube, sphere, light, lightHelper);
 renderer.render(scene, camera);
 
 function animate() {
-    light.position.x += 0.1
+    //light.position.x += 0.1
     //cube.position.x += 0.1;
     //cube.rotation.x += 0.1
     // Muck around with the axes
