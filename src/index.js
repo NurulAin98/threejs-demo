@@ -38,10 +38,10 @@ function createCamera() {
   return camera;
 }
 
-function createAxesHelper() {
-  let axesHelper = new THREE.AxesHelper(40);
-  return axesHelper;
-}
+// function createAxesHelper() {
+//   let axesHelper = new THREE.AxesHelper(40);
+//   return axesHelper;
+// }
 
 function getRandomColor() {
   let colors = [
@@ -97,7 +97,7 @@ function createLightHelper(light) {
 let renderer = createRenderer();
 let scene = createScene();
 let camera = createCamera();
-let axesHelper = createAxesHelper();
+// let axesHelper = createAxesHelper();
 let cube = createCube();
 let sphere = createSphere();
 let light = createLight();
@@ -124,7 +124,7 @@ for (let i = 1; i <= cubeCount; i += 1) {
 
 console.log(cubes.length);
 
-scene.add(axesHelper);
+// scene.add(axesHelper);
 scene.add(cube, sphere, light, lightHelper, ...cubes);
 
 renderer.render(scene, camera);
