@@ -5,7 +5,7 @@
 // - Meshes (objects in the 3D world)
 // - Lights
 
-// console.log(process.env.API_KEY);
+console.log(process.env.API_KEY);
 
 const THREE = require("three");
 const orbit = require("three-orbitcontrols");
